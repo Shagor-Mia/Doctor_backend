@@ -15,7 +15,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL_ONE],
+    origin: ["http://localhost:5173", process.env.FRONTEND_URL, DASHBOARD_URL],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include all necessary methods
     credentials: true,
   })
